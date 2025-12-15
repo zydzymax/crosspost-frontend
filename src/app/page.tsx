@@ -28,6 +28,7 @@ const features = [
     icon: Cloud,
     title: 'Облачные хранилища',
     description: 'Подключите Google Drive или Яндекс.Диск. Медиа автоматически синхронизируется и адаптируется.',
+    link: '/guide/cloud-storage',
   },
   {
     icon: Calendar,
@@ -178,18 +179,43 @@ export default function LandingPage() {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature) => (
-              <div 
-                key={feature.title}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition">
-                  <feature.icon className="w-6 h-6 text-indigo-400" />
+            {features.map((feature) => {
+              const content = (
+                <>
+                  <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition">
+                    <feature.icon className="w-6 h-6 text-indigo-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-400 text-sm">{feature.description}</p>
+                  {'link' in feature && (
+                    <span className="inline-flex items-center gap-1 mt-3 text-xs text-indigo-400 group-hover:text-indigo-300">
+                      Подробнее <ArrowRight className="w-3 h-3" />
+                    </span>
+                  )}
+                </>
+              )
+
+              if ('link' in feature && feature.link) {
+                return (
+                  <Link
+                    key={feature.title}
+                    href={feature.link}
+                    className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition group block"
+                  >
+                    {content}
+                  </Link>
+                )
+              }
+
+              return (
+                <div
+                  key={feature.title}
+                  className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition group"
+                >
+                  {content}
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

@@ -321,8 +321,8 @@ export default function LandingPage() {
             
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <a href="mailto:support@saleswhisper.pro" className="hover:text-white transition">Поддержка</a>
-              <a href="#" className="hover:text-white transition">Политика конфиденциальности</a>
-              <a href="#" className="hover:text-white transition">Условия использования</a>
+              <a href="https://saleswhisper.pro/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Политика конфиденциальности</a>
+              <a href="https://saleswhisper.pro/terms" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Условия использования</a>
             </div>
             
             <div className="text-sm text-gray-500">

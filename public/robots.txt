@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://crosspost.saleswhisper.pro/sitemap.xml

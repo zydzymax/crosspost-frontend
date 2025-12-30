@@ -115,8 +115,7 @@ export const pricingApi = {
 
 // Health check
 export const healthApi = {
-  check: () => api.GET('/api/v1/health'),
-  ready: () => api.GET('/api/v1/ready'),
+  check: () => api.GET('/api/v1/health', {}),
 }
 
 export default api

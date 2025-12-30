@@ -303,7 +303,7 @@ export default function BillingPage() {
           </p>
         </div>
         <a
-          href="https://t.me/sovani_support"
+          href="https://t.me/saleswhisper_support"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition font-medium flex items-center gap-2"

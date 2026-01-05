@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
   Send, BarChart3, FileText, Users, Calendar, Sparkles,
-  Settings, CreditCard, LogOut, Menu, X, ChevronRight
+  Settings, CreditCard, LogOut, TrendingUp, Menu, X, ChevronRight
 } from 'lucide-react'
 
 interface User {
@@ -24,6 +24,7 @@ const navigation = [
   { name: 'Аккаунты', href: '/dashboard/accounts', icon: Users },
   { name: 'Контент-план', href: '/dashboard/content-plan', icon: Calendar },
   { name: 'Генерация', href: '/dashboard/generate', icon: Sparkles },
+  { name: 'Аналитика', href: '/dashboard/analytics', icon: TrendingUp },
   { name: 'Настройки', href: '/dashboard/settings', icon: Settings },
   { name: 'Тарифы', href: '/dashboard/settings/billing', icon: CreditCard },
 ]
@@ -92,7 +93,7 @@ export default function DashboardLayout({
             </div>
             <div>
               <h1 className="font-bold text-lg">Crosspost</h1>
-              <p className="text-xs text-gray-400">by SoVAni</p>
+              <p className="text-xs text-gray-400">by SalesWhisper</p>
             </div>
           </Link>
           <button

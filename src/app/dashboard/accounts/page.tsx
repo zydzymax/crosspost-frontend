@@ -68,6 +68,13 @@ const platforms = [
     color: '#00A8E6',
     description: 'Российская видеоплатформа',
   },
+  {
+    id: 'dzen',
+    name: 'Дзен',
+    icon: Video,
+    color: '#FFCC00',
+    description: 'Статьи и видео через Telegram',
+  },
 ]
 
 export default function AccountsPage() {
